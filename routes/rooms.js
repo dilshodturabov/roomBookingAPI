@@ -5,11 +5,14 @@ const {validate, Room} = require('../models/room');
 const ERROR_MESSAGE = "topilmadi";
 
 router.get('/', async (req, res)=>{
-	const room = await Room.find().select('- __v');
+	const {page, limit} = req.query;
+	const skip = (page - 1) * limit;
+	const room = await Room.find().skip(skip).limit(limit);
+	const allRooms = await Room.find();
 	let rooms = {
-		page: 1,
+		page:  parseInt(page),
 		count: room.length,
-		page_size: 10,
+		page_size: Math.ceil(allRooms.length / limit),
 		results: room
 	}
 	res.status(200).send(rooms);
