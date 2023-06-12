@@ -2,12 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const roomsRoute = require('./routes/rooms');
-// const bookingsRoute = require('./routes/bookings');
+const bookingsRoute = require('./routes/bookings');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use('/api/rooms', roomsRoute);
-// app.use('/',bookingsRoute);
+app.use('/api/rooms', bookingsRoute);
 
 const urlToDatabase = "mongodb://127.0.0.1:27017/roomBooking";
 mongoose.connect(urlToDatabase, {useNewUrlParser:true, useUnifiedTopology:true})
