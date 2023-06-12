@@ -3,6 +3,7 @@ const router = express.Router();
 const Joi = require('Joi');
 const mongoose = require('mongoose');
 const {validate, Room} = require('../models/room');
+const {validateBooking, Booking}= require('../models/booking');
 
 const ERROR_MESSAGE = "topilmadi";
 
@@ -57,47 +58,9 @@ router.get('/:Id', async (req, res)=>{
 
 });
 
-const bookingSchema = new mongoose.Schema({
-	resident: {
-		name: {
-			type: String,
-			minlength: 3,
-			maxlength: 50,
-			required: true,
-			trim: true
-		}
-	},
-	room: { 
-		type: String,
-		required: true
-	},
-
-	start: {
-		type: Date,
-		default: Date.now 
-	},
-	end: {
-		type: Date,
-		required: true
-	}
-});
-
-const Booking = new mongoose.model('Booking', bookingSchema);
-
-function validateRoom(booking){
-	const bookingValidator = Joi.object({
-    	resident: Joi.object({
-    	    name: Joi.string().min(3).max(50).required().trim()
-    	}),
-    	start: Joi.date().default(Date.now),
-    	end: Joi.date().required()
-	});
-	
-	return bookingValidator.validate(booking);
-}
 
 router.post('/:Id/book', async (req, res) => {
-	const {error} = validateRoom(req.body);
+	const {error} = validateBooking(req.body);
 	if(error)
 		res.status(400).send(error.details[0].message);
 
