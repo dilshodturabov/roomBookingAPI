@@ -22,7 +22,7 @@ const Room = new mongoose.model('Room', roomSchema);
 
 function validateRoom(room){
 	const roomSchema = Joi.object({
-		name: Joi.string().required().min(3).max(50),
+		name: Joi.string().min(3).max(50),
 		type: Joi.string().required().valid("focus", "team", "reference"),
 		capacity: Joi.number().required()		
 	});
