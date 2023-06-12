@@ -21,7 +21,17 @@ router.post('/:Id/book', async (req, res) => {
     
     await booking.save();
     
-    res.send(booking);
+    res.send({
+    	message: "xona muvaffaqiyatli band qilindi"
+    });
+});
+
+router.get('/:Id/availability', async (req, res)=>{
+	const roomAvailability = await Booking.find({
+		room: req.params.Id,
+	});
+
+	return res.status(200).send(roomAvailability);
 });
 
 module.exports = router;
