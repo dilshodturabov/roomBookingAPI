@@ -14,9 +14,6 @@ mongoose.connect(urlToDatabase, {useNewUrlParser:true, useUnifiedTopology:true})
     .then(()=> console.log('database connected...'))
     .catch(err=>console.log('Program crashed on connecting to database!', err))
 
-
-
-
 const port = process.env.PORT || 5001;
 
 app.listen(port,()=>{
