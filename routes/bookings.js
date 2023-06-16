@@ -70,7 +70,7 @@ router.post('/:Id/book', async (req, res) => {
 router.get('/:Id/availability', async (req, res) => {
     const roomAvailability = await Booking.find({
             room: req.params.Id,
-            // end: { $gte: new Date() }
+            start: { $gte: new Date() }
 
         })
         .select({ _id: 0, start: 1, end: 1 })
