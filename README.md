@@ -22,5 +22,5 @@ This will start the My Project tool and do amazing things.
 ## License
 
 none.
-
-ushbu proyekt mening birinchi loyiham bundan oldin tutorial orqali qilgan loyihalarim ham bor lekin bunisini tutorialsiz qilganman o'zimning bilimlarim asosida agar xato yoki bug topsangiz iltimos habar bering 
+## More info
+ushbu proyekt mening birinchi loyiham bundan oldin tutorial orqali qilgan loyihalarim ham bor lekin bunisini tutorialsiz google orqali  qilganman o'zimning bilimlarim asosida agar xato yoki bug topsangiz iltimos habar bering 
