@@ -23,4 +23,6 @@ This will start the My Project tool and do amazing things.
 
 none.
 ## More info
-ushbu proyekt mening birinchi loyiham bundan oldin tutorial orqali qilgan loyihalarim ham bor lekin bunisini tutorialsiz google orqali  qilganman o'zimning bilimlarim asosida agar xato yoki bug topsangiz iltimos habar bering 
+ushbu proyekt mening birinchi loyiham bundan oldin tutorial orqali qilgan loyihalarim ham bor lekin bunisini tutorialsiz google orqali  qilganman o'zimning bilimlarim asosida agar xato yoki bug topsangiz iltimos habar bering.
+
+mening githubimda add reviewer degan joyini topa olmadim shuning uchun reviewer sifatida sizni qo'sha olmadim
