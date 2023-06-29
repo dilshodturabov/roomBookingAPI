@@ -12,16 +12,16 @@
 		}
 	},
 	room: { 
-		type: String,
+		type: Number,
 		required: true
 	},
 
 	start: {
-		type: Date,
-		default: Date.now 
+		type: String,
+		required: true
 	},
 	end: {
-		type: Date,
+		type: String,
 		required: true
 	}
 });
@@ -33,8 +33,8 @@ function validateBooking(booking){
     	resident: Joi.object({
     	    name: Joi.string().min(3).max(50).required().trim()
     	}),
-    	start: Joi.date().default(Date.now),
-    	end: Joi.date().required()
+    	start: Joi.string().regex(/^(\d{2})-(\d{2})-(\d{4}) (\d{2}):(\d{2}):(\d{2})$/),
+    	end: Joi.string().required()
 	});
 	
 	return bookingValidator.validate(booking);

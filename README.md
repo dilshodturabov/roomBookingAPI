@@ -9,12 +9,11 @@ To install My Project, follow these steps || Ushbu proyektni o'rnatish uchun qui
 1. Install the latest version of Node.js || Node.js dasturning eng oxirgi versiyasini o'rnating.
 2. Clone this repository || ushbu repositoriyani clone qilib oling.
 3. Run `npm install` to install the dependencies || `npm install` buyrug'ini terminal, cmd, shell orqali yurgizing.
-<<<<<<< HEAD
+
 4. Install mongodb compass for using databese section and connect mongodb://localhost:27017 || mongodb compass dasturini o'rnating dasturning baza qismini ishlatish uchun. mongodb://localhost:27017 ga ulaning
 =======
-4. Install mongodb compass for using databese section || mongodb compass dasturini o'rnating dasturni baza qismini ishlatish uchun
+4. Install mongodb compass for using databese section || mongodb compass dasturini o'rnating, dasturning baza qismini ishlatish uchun. 
 
->>>>>>> 22daaab1f70f57b1f10e950b26e7354666e16a0d
 ## Usage
 
 To use My Project, run the following command || Ushbu proyektni ishga tushurish uchun quidagi commandni yurgazing:
